@@ -19,12 +19,15 @@ namespace ChatBot
 
         public void Process(Hashtable table)
         {
-            Console.WriteLine("Guarantee? Put 1 to ask");
-            int answer = Convert.ToInt32(Console.ReadLine());
+            
             foreach (DictionaryEntry item in table)
             {
-                if (item.Key.Equals("Guarantee?"))
-                Console.WriteLine($"{item.Value}");
+                Console.WriteLine($"{item.Key} Put 1 to ask");
+                int answer = Convert.ToInt32(Console.ReadLine());
+                if (item.Key.Equals($"{item.Key}"))
+                {
+                    Console.WriteLine($"{item.Value}");
+                }                   
             }
         }
 

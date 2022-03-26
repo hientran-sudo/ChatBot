@@ -11,8 +11,7 @@ namespace ChatBot
     {
         public void InitializeKnownCarResponses()
         {
-            Hashtable table = new Hashtable();
-            
+            Hashtable table = new Hashtable();           
             table.Add("Guarantee?", "Sure - it's in the fine print of our contract");
             table.Add("Financing?", "Louie the loan shark will be happy to work with you");
 
