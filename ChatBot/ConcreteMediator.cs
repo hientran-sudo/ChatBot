@@ -10,10 +10,13 @@ namespace ChatBot
     internal class ConcreteMediator : IMediator
     {
         private ChatBot1 _car;
-        public ConcreteMediator(ChatBot1 car)
+        private ChatBot2 _house;
+        public ConcreteMediator(ChatBot1 car, ChatBot2 house)
         {
             this._car = car;
+            this._house = house;
             this._car.SetMediator(this);
+            this._house.SetMediator(this);
             
         }
 
@@ -27,7 +30,7 @@ namespace ChatBot
                 if (item.Key.Equals($"{item.Key}"))
                 {
                     Console.WriteLine($"{item.Value}");
-                }                   
+                }              
             }
         }
 
