@@ -11,15 +11,18 @@ namespace ChatBot
     {
         private ChatBot1 _car;
         private ChatBot2 _house;
+        private ChatBot3 _insurance;
         private GeneralChatBot _general;
-        public ConcreteMediator(ChatBot1 car, ChatBot2 house, GeneralChatBot general)
+        public ConcreteMediator(ChatBot1 car, ChatBot2 house, ChatBot3 insurance, GeneralChatBot general)
         {
             this._car = car;
             this._house = house;
+            this._insurance = insurance;
             this._general = general;
 
             this._car.SetMediator(this);
             this._house.SetMediator(this);
+            this._insurance.SetMediator(this);
             this._general.SetMediator(this);
         }
 

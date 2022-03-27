@@ -9,12 +9,13 @@ namespace ChatBot
         {
             ChatBot1 car = new ChatBot1();
             ChatBot2 house = new ChatBot2();
+            ChatBot3 insurance = new ChatBot3();
             GeneralChatBot general = new GeneralChatBot();
 
-            new ConcreteMediator(car, house, general);
+            new ConcreteMediator(car, house, insurance, general);
 
             Console.WriteLine("Chat Bot\r");
-            Console.WriteLine("Enter \n 1 to ask about car \n 2 to ask about house");
+            Console.WriteLine("Enter \n 1 to ask about Car \n 2 to ask about House \n 3 to ask about Insurance");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -27,6 +28,11 @@ namespace ChatBot
                     Console.WriteLine("Questions about House\r");
                     house.InitializeKnownHouseResponses();
                     break;
+                case 3:
+                    Console.WriteLine("Questions about Insurance\r");
+                    insurance.InitializeKnownInsuranceResponses();
+                    break;
+
             }          
         }
     }

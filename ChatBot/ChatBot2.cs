@@ -10,25 +10,21 @@ namespace ChatBot
     internal class ChatBot2 : BaseChatBot
     {
         Hashtable table = new Hashtable();
-        List<string> respond = new List<string>();
         public void InitializeKnownHouseResponses()
         {
-            table.Add("Insurance?", "Yes - it's covered our contract");
-            table.Add("Safety", "Yes - it's in the safe neighborhood");
+            table.Add("Year Built?", "It's 2021");
+            table.Add("Satety?", "Yes - it's in the safe neighborhood nearby Fairfield U");
+            table.Add("Property type?", "It's a house");
+            table.Add("How many squarefeets?", "It's 4,000 sqrts");
+            table.Add("Price?", "It's $850,000");
+            table.Add("How many bedrooms?", "It's 5 bedrooms");
+            table.Add("How many bathrooms?", "It's 4.5 bathrooms");          
+            table.Add("Is A/C included?", "Yes - it is");
+            table.Add("Is swimming pool included?", "Yes - it is");
+            table.Add("Insurance?", "Yes - it's covered in our contract");          
 
             this.mediator.Process(this, table);
         }
-
-
     }
-        //public void InitializeUnKnownHouseResponses()
-        //{
-        //    respond.Add("We have the best selection & prices, come on down");
-        //    respond.Add("Happy to talk to you more in person about your question");
-        //    Random rnd = new Random();
-        //    int index = rnd.Next(respond.Count);
-        //    Console.WriteLine(respond[index]);
-
-        //}
-   }
+ }
 
