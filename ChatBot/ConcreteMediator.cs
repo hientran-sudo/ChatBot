@@ -20,19 +20,24 @@ namespace ChatBot
             
         }
 
-        public void Process(Hashtable table)
+        public void Process(Hashtable table, List<string> respond)
         {
-            
+            int answer;
             foreach (DictionaryEntry item in table)
             {
-                Console.WriteLine($"{item.Key} Put 1 to ask");
-                int answer = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine($"{item.Key} Enter 1 to ask");
+                answer = Convert.ToInt32(Console.ReadLine());
                 if (item.Key.Equals($"{item.Key}"))
                 {
                     Console.WriteLine($"{item.Value}");
+                    Console.WriteLine("Does that answer your question? Enter \n 1 as Yes \n 0 as No");
+                    answer = Convert.ToInt32(Console.ReadLine());
+                    if (answer == 0)
+                    {
+                        this._car.InitializeUnKnownCarResponses();
+                    }
                 }              
-            }
+            }           
         }
-
     }
 }
