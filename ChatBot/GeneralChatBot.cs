@@ -12,7 +12,7 @@ namespace ChatBot
         public void InitializeUnKnownResponses()
         {
 
-            respond.Add("We have the best selection & prices, come on down");
+            respond.Add("We have the best selections & prices, come on down");
             respond.Add("Happy to talk to you more in person about your question");
             respond.Add("It's okay! We can help you more in person");
             respond.Add("We apologize that our AI assistant could not answer your questions");
