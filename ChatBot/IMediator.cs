@@ -9,7 +9,7 @@ namespace ChatBot
 {
     internal interface IMediator
     {
-        void Process(Hashtable table, List<string> respond)
+        void Process(object sender, Hashtable table, List<string> respond)
         {
 
         }

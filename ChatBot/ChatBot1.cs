@@ -15,7 +15,7 @@ namespace ChatBot
         {                     
             table.Add("Guarantee?", "Sure - it's in the fine print of our contract");
             table.Add("Financing?", "Louie the loan shark will be happy to work with you");
-            this.mediator.Process(table, respond);
+            this.mediator.Process(this, table, respond);
         }
         //public void InitializeUnKnownCarResponses()
         //{
