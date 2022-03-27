@@ -35,8 +35,8 @@ namespace ChatBot
                 answer = Convert.ToInt32(Console.ReadLine());
                 if (item.Key.Equals($"{item.Key}"))
                 {
-                    Console.WriteLine($"{item.Value}");
-                    Console.WriteLine("Does that answer your question? Enter \n 1 as Yes \n 0 as No");
+                    Console.WriteLine($"--> {item.Value} \n");
+                    Console.WriteLine("Does that answer your question? \nEnter \n 1 as Yes and to Continue \n 0 as No and to Quit");
                     answer = Convert.ToInt32(Console.ReadLine());
                     if (answer == 0)
                     {
