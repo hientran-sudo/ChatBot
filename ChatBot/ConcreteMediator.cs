@@ -39,8 +39,8 @@ namespace ChatBot
                     {
                         this._general.InitializeUnKnownResponses();
                     }
-                }              
-            }           
+                }
+            }
         }
     }
 }
