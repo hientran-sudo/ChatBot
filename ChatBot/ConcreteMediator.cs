@@ -11,13 +11,16 @@ namespace ChatBot
     {
         private ChatBot1 _car;
         private ChatBot2 _house;
-        public ConcreteMediator(ChatBot1 car, ChatBot2 house)
+        private GeneralChatBot _general;
+        public ConcreteMediator(ChatBot1 car, ChatBot2 house, GeneralChatBot general)
         {
             this._car = car;
             this._house = house;
+            this._general = general;
+
             this._car.SetMediator(this);
             this._house.SetMediator(this);
-            
+            this._general.SetMediator(this);
         }
 
         public void Process(Hashtable table, List<string> respond)
@@ -34,7 +37,7 @@ namespace ChatBot
                     answer = Convert.ToInt32(Console.ReadLine());
                     if (answer == 0)
                     {
-                        this._car.InitializeUnKnownCarResponses();
+                        this._general.InitializeUnKnownResponses();
                     }
                 }              
             }           

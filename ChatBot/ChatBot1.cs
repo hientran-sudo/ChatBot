@@ -17,14 +17,14 @@ namespace ChatBot
             table.Add("Financing?", "Louie the loan shark will be happy to work with you");
             this.mediator.Process(table, respond);
         }
-        public void InitializeUnKnownCarResponses()
-        {
+        //public void InitializeUnKnownCarResponses()
+        //{
             
-            respond.Add("We have the best selection & prices, come on down");
-            respond.Add("Happy to talk to you more in person about your question");
-            Random rnd = new Random();
-            int index = rnd.Next(respond.Count);
-            Console.WriteLine(respond[index]);
-        }
+        //    respond.Add("We have the best selection & prices, come on down");
+        //    respond.Add("Happy to talk to you more in person about your question");
+        //    Random rnd = new Random();
+        //    int index = rnd.Next(respond.Count);
+        //    Console.WriteLine(respond[index]);
+        //}
     }
 }

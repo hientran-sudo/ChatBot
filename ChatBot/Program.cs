@@ -9,7 +9,9 @@ namespace ChatBot
         {
             ChatBot1 car = new ChatBot1();
             ChatBot2 house = new ChatBot2();
-            new ConcreteMediator(car,house);
+            GeneralChatBot general = new GeneralChatBot();
+
+            new ConcreteMediator(car, house, general);
 
             Console.WriteLine("Chat Bot\r");
             Console.WriteLine("Enter \n 1 to ask about car \n 2 to ask about house");
