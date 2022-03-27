@@ -17,9 +17,9 @@ namespace ChatBot
             table.Add("Rate?", "It's $1200 in total");
             table.Add("Can I pay monthly?", "Yes - you can! It's $120 per month");
             table.Add("Is tax included?", "No - it isn't");
-            table.Add("Is dental care included", "Yes - it is");
-            table.Add("Is vision care included", "Yes - it is");
-            table.Add("Is dermatologist included", "No - it isn't");
+            table.Add("Is dental care included?", "Yes - it is");
+            table.Add("Is vision care included?", "Yes - it is");
+            table.Add("Is dermatologist included?", "No - it isn't");
             table.Add("Is PTO included?", "Yes - it is");
             table.Add("Renew automatically?", "Yes - it is");
             

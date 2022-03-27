@@ -14,22 +14,22 @@ namespace ChatBot
 
             new ConcreteMediator(car, house, insurance, general);
 
-            Console.WriteLine("Chat Bot\r");
-            Console.WriteLine("Enter \n 1 to ask about Car \n 2 to ask about House \n 3 to ask about Insurance \n 4 to Quit");
+            Console.WriteLine("Chat Bot\n");
+            Console.WriteLine("Enter \n 1 - to ask about Car \n 2 - to ask about House \n 3 - to ask about Insurance \n 4 - to Quit");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
                 case 1:
-                    Console.WriteLine("Questions about Car\r");
+                    Console.WriteLine("-----------Questions about Car-----------\n");
                     car.InitializeKnownCarResponses();
 
                     break;
                 case 2:
-                    Console.WriteLine("Questions about House\r");
+                    Console.WriteLine("-----------Questions about House-----------\n");
                     house.InitializeKnownHouseResponses();
                     break;
                 case 3:
-                    Console.WriteLine("Questions about Insurance\r");
+                    Console.WriteLine("-----------Questions about Insurance-----------\n");
                     insurance.InitializeKnownInsuranceResponses();
                     break;
                 case 4:

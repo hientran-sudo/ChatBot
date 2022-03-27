@@ -31,11 +31,11 @@ namespace ChatBot
             int answer;
             foreach (DictionaryEntry item in table)
             {
-                Console.WriteLine($"{item.Key} Enter 1 to ask");
+                Console.WriteLine($"Q: {item.Key} (Enter 1 - to ask)");
                 answer = Convert.ToInt32(Console.ReadLine());
                 if (item.Key.Equals($"{item.Key}"))
                 {
-                    Console.WriteLine($"--> {item.Value} \n");
+                    Console.WriteLine($"A: {item.Value} \n");
                     Console.WriteLine("Does that answer your question? \nEnter \n 1 as Yes and to Continue \n 0 as No and to Quit");
                     answer = Convert.ToInt32(Console.ReadLine());
                     if (answer == 0)
