@@ -23,7 +23,7 @@ namespace ChatBot
             this._general.SetMediator(this);
         }
 
-        public void Process(object sender, Hashtable table, List<string> respond)
+        public void Process(object sender, Hashtable table)
         {
             int answer;
             foreach (DictionaryEntry item in table)

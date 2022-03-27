@@ -10,12 +10,13 @@ namespace ChatBot
     internal class ChatBot1 : BaseChatBot
     {
         Hashtable table = new Hashtable();
-        List<string> respond = new List<string>();
+        
         public void InitializeKnownCarResponses()
         {                     
             table.Add("Guarantee?", "Sure - it's in the fine print of our contract");
             table.Add("Financing?", "Louie the loan shark will be happy to work with you");
-            this.mediator.Process(this, table, respond);
+
+            this.mediator.Process(this, table);
         }
         //public void InitializeUnKnownCarResponses()
         //{

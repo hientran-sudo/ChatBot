@@ -16,7 +16,7 @@ namespace ChatBot
             table.Add("Insurance?", "Yes - it's covered our contract");
             table.Add("Safety", "Yes - it's in the safe neighborhood");
 
-            this.mediator.Process(this, table, respond);
+            this.mediator.Process(this, table);
         }
 
 
