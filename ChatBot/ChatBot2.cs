@@ -15,7 +15,7 @@ namespace ChatBot
             table.Add("Year Built?", "It's 2021");
             table.Add("Satety?", "Yes - it's in the safe neighborhood nearby Fairfield U");
             table.Add("Property type?", "It's a house");
-            table.Add("How many squarefeets?", "It's 4,000 sqrts");
+            table.Add("How many squarefeets", "It's 4,000 sqrts");
             table.Add("Price?", "It's $850,000");
             table.Add("How many bedrooms?", "It's 5 bedrooms");
             table.Add("How many bathrooms?", "It's 4.5 bathrooms");          
@@ -26,5 +26,5 @@ namespace ChatBot
             this.mediator.Process(this, table);
         }
     }
- }
+}
 

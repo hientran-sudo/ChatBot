@@ -31,21 +31,19 @@ namespace ChatBot
             int answer;
             foreach (DictionaryEntry item in table)
             {
-                Console.WriteLine($"Q: {item.Key} (Enter 1 - to ask)");
+                Console.WriteLine($"Q: {item.Key} (Enter any number on the keyboard - to ask AI Assistant this question)");
                 answer = Convert.ToInt32(Console.ReadLine());
-                if (item.Key.Equals($"{item.Key}"))
+                Console.WriteLine($"A: {item.Value} \n");
+                Console.WriteLine("Does that answer your question? \nEnter \n any number on the keyboard as Yes and to Continue \n 0 as No and to Quit");
+                answer = Convert.ToInt32(Console.ReadLine());
+                if (answer == 0)
                 {
-                    Console.WriteLine($"A: {item.Value} \n");
-                    Console.WriteLine("Does that answer your question? \nEnter \n 1 as Yes and to Continue \n 0 as No and to Quit");
-                    answer = Convert.ToInt32(Console.ReadLine());
-                    if (answer == 0)
-                    {
-                        this._general.InitializeUnKnownResponses();
-                        Console.WriteLine("See You Next Time!");
-                        break;
-                    }
+                    this._general.InitializeUnKnownResponses();
+                    Console.WriteLine("See You Next Time!");
+                    break;
                 }
-            }
+
+            }          
         }
     }
 }
