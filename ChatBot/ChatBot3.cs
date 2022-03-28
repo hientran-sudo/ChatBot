@@ -10,7 +10,7 @@ namespace ChatBot
     internal class ChatBot3 : BaseChatBot
     {
         Hashtable table = new Hashtable();
-        public void InitializeKnownInsuranceResponses()
+        public ChatBot3()
         {
             table.Add("Insurance Type?", "It's Health Insurance");
             table.Add("Coverage Time?", "It will cover for 1 year");
@@ -22,6 +22,9 @@ namespace ChatBot
             table.Add("Is dermatologist included?", "No - it isn't");
             table.Add("Is PTO included?", "Yes - it is");
             table.Add("Renew automatically?", "Yes - it is");
+        }
+        public void InitializeKnownInsuranceResponses()
+        {
             
             this.mediator.Process(this, table);
         }

@@ -9,8 +9,8 @@ namespace ChatBot
 {
     internal class ChatBot1 : BaseChatBot
     {
-        Hashtable table = new Hashtable();     
-        public void InitializeKnownCarResponses()
+        Hashtable table = new Hashtable(); 
+        public ChatBot1()
         {
             table.Add("Car Model?", "2022 A 220 4MATIC Sedan");
             table.Add("Price?", "It's $35,950");
@@ -22,6 +22,9 @@ namespace ChatBot
             table.Add("Cargo capacity?", "8.6 cu ft");
             table.Add("Guarantee?", "Sure - it's in the fine print of our contract");
             table.Add("Financing?", "Louie the loan shark will be happy to work with you");
+        }
+        public void InitializeKnownCarResponses()
+        {           
 
             this.mediator.Process(this, table);
         }       
