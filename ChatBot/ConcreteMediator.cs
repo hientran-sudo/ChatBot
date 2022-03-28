@@ -29,26 +29,29 @@ namespace ChatBot
         public void Process(object sender, Hashtable table)
         {
             char answer;
-            
+
             foreach (DictionaryEntry item in table)
             {
-                Console.WriteLine($"\nQ: {item.Key} \n(!) Enter \n 'y' - to ask AI Assistant that question OR \n 'n' - to Quit");
+                Console.WriteLine($"\nQ: {item.Key} \n(!) Enter \n 'y' - to ask that question OR \n 'n' - to ask another question");
                 Console.WriteLine("-->Your Input: ");
                 answer = Console.ReadKey().KeyChar;
                 if (answer == 'y')
                 {
                     Console.WriteLine($"\nA: {item.Value} \n");
-                    Console.WriteLine("(?) Does that answer your question? \n(!) Enter \n 'y' as Yes and to Continue OR \n 'n' as No and to Quit");
+                    Console.WriteLine("(?) Does that answer your question? \n(!) Enter \n 'y' as Yes and to Continue OR \n 'n' as No and to Quit the Chat");
                     Console.WriteLine("-->Your Input: ");
                     answer = Console.ReadKey().KeyChar;
-
-                }               
+                    if (answer == 'n')
+                    {
+                        Console.WriteLine("\n-----------Chat is Ended-----------");
+                        this._general.InitializeUnKnownResponses();
+                        Console.WriteLine("(!) Back to Main Menu\n");
+                        break;
+                    }
+                }
                 else if (answer == 'n')
                 {
-                    Console.WriteLine("\n-----------Chat is Ended-----------");
-                    this._general.InitializeUnKnownResponses();
-                    Console.WriteLine("(!) Back to Main Menu\n");
-                    break;
+                    Console.WriteLine("\n(!) Let's try another question\n");
                 }
                 else
                 {
