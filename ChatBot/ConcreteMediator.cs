@@ -55,7 +55,7 @@ namespace ChatBot
                 }
                 else
                 {
-                    Console.WriteLine("\n(!) Please enter a Correct Input");
+                    Console.WriteLine("\n(!) Please enter a Correct Input\n");
                     break;
                 }
             }
