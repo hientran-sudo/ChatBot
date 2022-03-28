@@ -8,7 +8,7 @@ namespace ChatBot
         public static void MainMenu()
         {           
             Console.WriteLine("-----------Main Menu-----------");
-            Console.WriteLine("Enter \n 1 - to ask about Car \n 2 - to ask about House \n 3 - to ask about Insurance \n 4 - to Quit");
+            Console.WriteLine("(!) Enter \n 1 - to ask about Car \n 2 - to ask about House \n 3 - to ask about Insurance \n 4 - to Quit");
         }
         static void Main(string[] args)
         {
@@ -25,7 +25,7 @@ namespace ChatBot
             do
             {
                 MainMenu();
-                Console.WriteLine("Your Input: ");
+                Console.WriteLine("-->Your Input: ");
                 option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {

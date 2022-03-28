@@ -48,18 +48,18 @@ namespace ChatBot
             //}
             foreach (DictionaryEntry item in table)
             {
-                Console.WriteLine($"\nQ: {item.Key} (Enter any number on the keyboard - to ask AI Assistant this question)");
-                Console.WriteLine("Your Input: ");
+                Console.WriteLine($"\nQ: {item.Key} \n(!) Enter any number on the keyboard - to ask AI Assistant this question");
+                Console.WriteLine("-->Your Input: ");
                 answer = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine($"A: {item.Value} \n");
-                Console.WriteLine("Does that answer your question? \nEnter \n any number on the keyboard as Yes and to Continue \n 0 as No and to Quit");
-                Console.WriteLine("Your Input: ");
+                Console.WriteLine("(?) Does that answer your question? \n(!) Enter \n any number on the keyboard as Yes and to Continue \n 0 as No and to Quit");
+                Console.WriteLine("-->Your Input: ");
                 answer = Convert.ToInt32(Console.ReadLine());
                 if (answer == 0)
                 {
-                    Console.WriteLine("Chat is Ended");
+                    Console.WriteLine("-----------Chat is Ended-----------");
                     this._general.InitializeUnKnownResponses();
-                    Console.WriteLine(">> Back to Main Menu\n");
+                    Console.WriteLine("(!) Back to Main Menu\n");
                     break;
                 }
             }
