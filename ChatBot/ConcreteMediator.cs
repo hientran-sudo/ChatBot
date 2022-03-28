@@ -28,7 +28,7 @@ namespace ChatBot
 
         public void Process(object sender, Hashtable table)
         {
-            int answer;
+            char answer;
             //foreach (DictionaryEntry item in table)
             //{
             //    Console.WriteLine($"\nQ: {item.Key} (Enter 'Y' - to ask AI Assistant this question OR 'N' to Quit )");
@@ -48,18 +48,26 @@ namespace ChatBot
             //}
             foreach (DictionaryEntry item in table)
             {
-                Console.WriteLine($"\nQ: {item.Key} \n(!) Enter any number on the keyboard - to ask AI Assistant that question");
+                Console.WriteLine($"\nQ: {item.Key} \n(!) Enter \n 'y' - to ask AI Assistant that question OR \n 'n' - to Quit");
                 Console.WriteLine("-->Your Input: ");
-                answer = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine($"A: {item.Value} \n");
-                Console.WriteLine("(?) Does that answer your question? \n(!) Enter \n any number on the keyboard as Yes and to Continue OR \n 0 as No and to Quit");
-                Console.WriteLine("-->Your Input: ");
-                answer = Convert.ToInt32(Console.ReadLine());
-                if (answer == 0)
+                answer = Console.ReadKey().KeyChar;
+                if (answer == 'y')
                 {
-                    Console.WriteLine("-----------Chat is Ended-----------");
+                    Console.WriteLine($"\nA: {item.Value} \n");
+                    Console.WriteLine("(?) Does that answer your question? \n(!) Enter \n 'y' as Yes and to Continue OR \n 'n' as No and to Quit");
+                    Console.WriteLine("-->Your Input: ");
+                    answer = Console.ReadKey().KeyChar;
+                }               
+                else if (answer == 'n')
+                {
+                    Console.WriteLine("\n-----------Chat is Ended-----------");
                     this._general.InitializeUnKnownResponses();
                     Console.WriteLine("(!) Back to Main Menu\n");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("\n(!) Please enter a Correct Input\n");
                     break;
                 }
             }
