@@ -28,21 +28,24 @@ namespace ChatBot
 
         public void Process(object sender, Hashtable table)
         {
-            int answer;
+            char answer;
             foreach (DictionaryEntry item in table)
             {
-                Console.WriteLine($"Q: {item.Key} (Enter any number on the keyboard - to ask AI Assistant this question)");
-                answer = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine($"A: {item.Value} \n");
-                Console.WriteLine("Does that answer your question? \nEnter \n any number on the keyboard as Yes and to Continue \n 0 as No and to Quit");
-                answer = Convert.ToInt32(Console.ReadLine());
-                if (answer == 0)
+                Console.WriteLine($"\nQ: {item.Key} (Enter 'Y' - to ask AI Assistant this question)");
+                Console.WriteLine("Your Input: ");
+                answer = Console.ReadKey().KeyChar;
+                Console.WriteLine($"\nA: {item.Value} \n");
+
+                Console.WriteLine("Does that answer your question? \nEnter \n 'Y' as Yes and to Continue \n 'N' as No and to Quit");
+                Console.WriteLine("Your Input: ");
+                answer = Console.ReadKey().KeyChar;
+                if (answer == 'N')
                 {
                     this._general.InitializeUnKnownResponses();
-                    Console.WriteLine("Back to Main Menu\n");
+                    Console.WriteLine(">> Back to Main Menu\n");
                     break;
                 }
-
+                
             }          
         }
     }

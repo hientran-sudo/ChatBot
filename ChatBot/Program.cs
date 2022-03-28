@@ -12,7 +12,6 @@ namespace ChatBot
         }
         static void Main(string[] args)
         {
-            Console.WriteLine(String.Format("{0," + Console.WindowWidth / 2 + "}", "Welcome to Chat Bot"));
             int option;
             ChatBot1 car = new ChatBot1();
             ChatBot2 house = new ChatBot2();
@@ -20,6 +19,8 @@ namespace ChatBot
             GeneralChatBot general = new GeneralChatBot();
 
             new ConcreteMediator(car, house, insurance, general);
+
+            Console.WriteLine(String.Format("{0," + Console.WindowWidth / 2 + "}", "Welcome to Chat Bot"));
 
             do
             {
@@ -29,20 +30,19 @@ namespace ChatBot
                 switch (option)
                 {
                     case 1:
-                        Console.WriteLine("-----------Questions about Car-----------\n");
+                        Console.WriteLine("-----------Start Chat about Car-----------");
                         car.InitializeKnownCarResponses();
-
                         break;
                     case 2:
-                        Console.WriteLine("-----------Questions about House-----------\n");
+                        Console.WriteLine("-----------Start Chat about House-----------");
                         house.InitializeKnownHouseResponses();
                         break;
                     case 3:
-                        Console.WriteLine("-----------Questions about Insurance-----------\n");
+                        Console.WriteLine("-----------Start Chat about Insurance-----------");
                         insurance.InitializeKnownInsuranceResponses();
                         break;
                     case 4:
-                        Console.WriteLine("Thank you and See you next time!\r");
+                        Console.WriteLine("Thank you and See you next time!");
                         break;
                 }
             }
