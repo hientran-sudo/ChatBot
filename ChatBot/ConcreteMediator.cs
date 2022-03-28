@@ -39,7 +39,7 @@ namespace ChatBot
                 if (answer == 0)
                 {
                     this._general.InitializeUnKnownResponses();
-                    Console.WriteLine("See You Next Time!");
+                    Console.WriteLine("Back to Main Menu\n");
                     break;
                 }
 
