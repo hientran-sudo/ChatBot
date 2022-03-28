@@ -25,7 +25,6 @@ namespace ChatBot
         }
         public void InitializeKnownCarResponses()
         {           
-
             this.mediator.Process(this, table);
         }       
     }

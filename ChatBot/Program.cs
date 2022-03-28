@@ -30,15 +30,15 @@ namespace ChatBot
                 switch (option)
                 {
                     case 1:
-                        Console.WriteLine("-----------Start Chat about Car-----------");
+                        Console.WriteLine("-----------Start Chat about Car-----------\n");
                         car.InitializeKnownCarResponses();
                         break;
                     case 2:
-                        Console.WriteLine("-----------Start Chat about House-----------");
+                        Console.WriteLine("-----------Start Chat about House-----------\n");
                         house.InitializeKnownHouseResponses();
                         break;
                     case 3:
-                        Console.WriteLine("-----------Start Chat about Insurance-----------");
+                        Console.WriteLine("-----------Start Chat about Insurance-----------\n");
                         insurance.InitializeKnownInsuranceResponses();
                         break;
                     case 4:

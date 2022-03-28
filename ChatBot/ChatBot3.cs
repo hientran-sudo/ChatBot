@@ -24,8 +24,7 @@ namespace ChatBot
             table.Add("Renew automatically?", "Yes - it is");
         }
         public void InitializeKnownInsuranceResponses()
-        {
-            
+        {           
             this.mediator.Process(this, table);
         }
     }

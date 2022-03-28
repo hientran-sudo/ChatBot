@@ -48,7 +48,7 @@ namespace ChatBot
             //}
             foreach (DictionaryEntry item in table)
             {
-                Console.WriteLine($"Q: {item.Key} (Enter any number on the keyboard - to ask AI Assistant this question)");
+                Console.WriteLine($"\nQ: {item.Key} (Enter any number on the keyboard - to ask AI Assistant this question)");
                 Console.WriteLine("Your Input: ");
                 answer = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine($"A: {item.Value} \n");
@@ -62,7 +62,6 @@ namespace ChatBot
                     Console.WriteLine(">> Back to Main Menu\n");
                     break;
                 }
-
             }
         }
     }
