@@ -48,11 +48,11 @@ namespace ChatBot
             //}
             foreach (DictionaryEntry item in table)
             {
-                Console.WriteLine($"\nQ: {item.Key} \n(!) Enter any number on the keyboard - to ask AI Assistant this question");
+                Console.WriteLine($"\nQ: {item.Key} \n(!) Enter any number on the keyboard - to ask AI Assistant that question");
                 Console.WriteLine("-->Your Input: ");
                 answer = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine($"A: {item.Value} \n");
-                Console.WriteLine("(?) Does that answer your question? \n(!) Enter \n any number on the keyboard as Yes and to Continue \n 0 as No and to Quit");
+                Console.WriteLine("(?) Does that answer your question? \n(!) Enter \n any number on the keyboard as Yes and to Continue OR \n 0 as No and to Quit");
                 Console.WriteLine("-->Your Input: ");
                 answer = Convert.ToInt32(Console.ReadLine());
                 if (answer == 0)

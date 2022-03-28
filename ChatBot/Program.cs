@@ -21,6 +21,10 @@ namespace ChatBot
             new ConcreteMediator(car, house, insurance, general);
 
             Console.WriteLine(String.Format("{0," + Console.WindowWidth / 2 + "}", "Welcome to Chat Bot"));
+            Console.WriteLine("Guideline");
+            Console.WriteLine("'(!)' - a Statement");
+            Console.WriteLine("'(?)' - a Question");
+            Console.WriteLine("'-->' - an User Input\n");
 
             do
             {
